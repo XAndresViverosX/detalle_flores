@@ -476,32 +476,6 @@
     </div>
   </div>
   <script>
-    // Intentar reproducción automática
-    window.addEventListener('load', function () {
-      const audioElement = document.getElementById('miAudio');
-      const notification = document.getElementById('audioNotification');
-      const btnMensaje = document.getElementById('btnMensaje');
-      const flowersDiv = document.querySelector('.flowers'); // Selecciona el div de flores
-      const titulo = document.querySelector('.titulo'); // Selecciona el div de flores
-
-      const playPromise = audioElement.play();
-
-      if (playPromise !== undefined) {
-        playPromise.then(function () {
-          // Reproducción exitosa, ocultar notificación
-          notification.style.display = 'none';
-          btnMensaje.style.display = 'none';
-          titulo.style.display = 'none';
-
-          // Mostrar las flores cuando la música se reproduce con éxito
-          flowersDiv.style.display = 'block';
-        }).catch(function (error) {
-          // Reproducción bloqueada, mostrar notificación
-          notification.style.display = 'block';
-          // Mantener las flores ocultas
-        });
-      }
-
       // Botón para reproducir manualmente
       document.getElementById('playButton').addEventListener('click', function () {
         audioElement.play();
