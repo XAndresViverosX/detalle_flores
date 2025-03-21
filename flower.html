@@ -477,6 +477,11 @@
   </div>
   <script>
     window.addEventListener('load', function () {
+      const audioElement = document.getElementById('miAudio');
+      const notification = document.getElementById('audioNotification');
+      const btnMensaje = document.getElementById('btnMensaje');
+      const flowersDiv = document.querySelector('.flowers'); // Selecciona el div de flores
+      const titulo = document.querySelector('.titulo'); // Selecciona el div de flores
       // Botón para reproducir manualmente
       document.getElementById('playButton').addEventListener('click', function () {
         audioElement.play();
