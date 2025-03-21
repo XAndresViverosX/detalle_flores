@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Para Danna ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #ffdde1);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M30,10 Q50,0 70,10 Q90,20 70,30 Q50,40 30,30 Q10,20 30,10 Z" fill="none" stroke="rgba(255,192,203,0.2)" /></svg>');
+            background-size: 300px 300px;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+            background-size: 300% 300%;
+            animation: gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .greetings {
+            margin-bottom: 30px;
+        }
+
+        .greetings span {
+            font-size: 3.5rem;
+            font-weight: 600;
+            display: inline-block;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        .greetings span:nth-child(1) {
+            color: #ff7675;
+            animation-delay: 0s;
+        }
+
+        .greetings span:nth-child(2) {
+            color: #e84393;
+            animation-delay: 0.2s;
+        }
+
+        .greetings span:nth-child(3) {
+            color: #ff7675;
+            animation-delay: 0.4s;
+        }
+
+        .greetings span:nth-child(4) {
+            color: #e84393;
+            animation-delay: 0.6s;
+        }
+
+        .greetings span:nth-child(5) {
+            color: #ff7675;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .nombre-principal {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .nombre-principal::after {
+            content: "❤️";
+            position: absolute;
+            font-size: 1.5rem;
+            top: 0;
+            right: -30px;
+            animation: latido 1.5s infinite alternate;
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.5);
+            }
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .description span {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .description span:nth-child(2) {
+            font-weight: 600;
+            color: #6c5ce7;
+            animation-delay: 0.5s;
+        }
+
+        .description span:nth-child(3) {
+            color: #e84393;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .button-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .botones {
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.3rem;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(232, 67, 147, 0.4);
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .botones::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .botones:hover {
+            transform: translateY(-7px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(232, 67, 147, 0.6);
+            background: linear-gradient(45deg, #e84393, #fd79a8);
+        }
+
+        .botones:active {
+            transform: translateY(2px);
+            box-shadow: 0 5px 10px rgba(232, 67, 147, 0.4);
+        }
+
+        .botones:hover::before {
+            left: 100%;
+        }
+
+        .button-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .button-icon {
+            margin-left: 10px;
+            display: inline-block;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .botones:hover .button-icon {
+            transform: scale(1.2);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .botones a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .flores {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            height: 100px;
+            pointer-events: none;
+        }
+
+        .flor {
+            position: absolute;
+            bottom: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            opacity: 0.8;
+            animation: flotar 6s infinite ease-in-out;
+        }
+
+        @keyframes flotar {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="greetings">
+            <span>H</span>
+            <span>o</span>
+            <span>l</span>
+            <span>a</span>
+            <span>!</span>
+        </div>
+
+        <h1 class="nombre-principal">Danna Lizeth Ceron Valencia</h1>
+
+        <div class="description">
+            <span>MI HERMOSA MUJER</span>
+            <span>MI FUTURA ESPOSA</span>
+            <span>ESTE DETALLE ES PARA TI ❤️</span>
+        </div>
+
+        <div class="button-container">
+            <a href="flower.html" class="botones" onclick="localStorage.setItem('playAudio', 'true');">
+                <span class="button-text">CLICK AQUÍ</span>
+                <span class="button-icon">❤️</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="flores"></div>
+    <script>
+        // Crear flores que floten en la pantalla
+        const flores = document.querySelector('.flores');
+        const colores = ['#fdcbf1', '#e6dee9', '#ff9a9e', '#fecfef'];
+
+        // Crear 15 flores flotantes
+        for (let i = 0; i < 15; i++) {
+            const flor = document.createElement('div');
+            flor.classList.add('flor');
+
+            // Tamaño aleatorio entre 30px y 80px
+            const tamaño = Math.random() * 50 + 30;
+            flor.style.width = `${tamaño}px`;
+            flor.style.height = `${tamaño}px`;
+
+            // Posición horizontal aleatoria
+            flor.style.left = `${Math.random() * 100}%`;
+
+            // Tiempo de animación aleatorio entre 6s y 12s
+            flor.style.animationDuration = `${Math.random() * 6 + 6}s`;
+
+            // Retraso aleatorio para la animación
+            flor.style.animationDelay = `${Math.random() * 5}s`;
+
+            // Forma de la flor (emoji de flor)
+            flor.innerHTML = "🌸";
+            flor.style.fontSize = `${tamaño}px`;
+            flor.style.color = colores[Math.floor(Math.random() * colores.length)];
+
+            flores.appendChild(flor);
+        }
+
+        // Añadir efecto de letras animadas
+        document.querySelectorAll('.greetings span').forEach((span, index) => {
+            span.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+</body>
+
+</html>
